@@ -302,3 +302,14 @@
     }
   }
 }
+
+
+
+[dir="rtl"]  {
+  .toggle-btn{
+    transform: scale(-1) !important;
+    &.rotate {
+      transform: scale(1) !important;;
+    }
+  }
+}

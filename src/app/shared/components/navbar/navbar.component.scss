@@ -5,14 +5,14 @@
   border: none;
   border-radius: $radius;
   background: none;
-  transform: scale(-1);
+  transform: scale(1);
   color: var(--gray-70-color);
   transition: all 0.3s ease-in-out;
   &:hover {
     background-color: rgb(var(--black-rgb-color)/ 5%);
   }
   &.rotate {
-    transform: scale(1);
+    transform: scale(-1);
   }
   @include mqMax("md") {
     display: none;

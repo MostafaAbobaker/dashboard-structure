@@ -159,7 +159,7 @@
       $property: map.get($properties, $name);
 
       --#{$name}-color-dark: #{color.adjust($property, $lightness: -10%)};
-      --#{$name}-color-darker: #{color.adjust($property, $lightness: -20%)};
+      --#{$name}-color-darker: #{color.adjust($property, $lightness: -30%)};
       --#{$name}-color-light: #{color.adjust($property, $lightness: 5%)};
       --#{$name}-color-lighten: #{color.adjust($property, $lightness: 45%)};
 
@@ -215,12 +215,12 @@
 @each $theme-name, $properties in $themes {
     @if $theme-name == "light" {
       // Light theme is also the default (root) theme
-      :root ,[data-theme="#{$theme-name}"] {
+      :root ,[data-bs-theme="#{$theme-name}"] {
         @include generate-theme-vars($theme-name, $properties);
       }
     } @else {
       // Other themes
-      [data-theme="#{$theme-name}"] {
+      [data-bs-theme="#{$theme-name}"] {
         @include generate-theme-vars($theme-name, $properties);
       }
     }

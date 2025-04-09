@@ -14,15 +14,19 @@
 
   <ul class="topbar-menu ms-auto">
     <li class="dropdown">
-      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <button *ngIf="!isRTL" class="nav-link " (click)="toggleDirection()">
         <i class="topbar-menu-icon me-2"><img src="./assets/img/united-kingdom.svg" alt="flag"></i> EN
-      </a>
-      <ul class="dropdown-menu dropdown-menu-end">
+      </button>
+      <button *ngIf="isRTL" class="nav-link " (click)="toggleDirection()">
+                <i class="topbar-menu-icon me-2"><img src="./assets/img/egypt.svg" alt="flag"></i> AR
+
+      </button>
+      <!-- <ul class="dropdown-menu dropdown-menu-end">
         <li><a class="dropdown-item" href="#"><i class="me-1"><img src="./assets/img/united-kingdom.svg" alt="flag"></i> English</a></li>
         <li><a class="dropdown-item" href="#"><i class="me-1"><img src="./assets/img/egypt.svg" alt="flag"></i> Arabic</a></li>
         <li><a class="dropdown-item" href="#"><i class="me-1"><img src="./assets/img/italy.svg" alt="flag"></i> Italian</a></li>
         <li><a class="dropdown-item" href="#"><i class="me-1"><img src="./assets/img/Spanish.svg" alt="flag"></i> Spanish</a></li>
-      </ul>
+      </ul> -->
     </li>
     <li class="dropdown">
       <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
@@ -112,7 +116,8 @@
       </div>
     </li>
     <li>
-      <button class="nav-link theme-toggle" type="button" id="theme-toggle"><i class="fi fi-rr-moon-stars topbar-menu-icon"></i></button>
+      <button class="nav-link theme-toggle" *ngIf="themeIcon === 'light' " (click)="toggleTheme()" type="button" id="theme-toggle"><i class="fi fi-rr-moon-stars topbar-menu-icon"></i></button>
+      <button class="nav-link theme-toggle" *ngIf="themeIcon === 'dark' " (click)="toggleTheme()" type="button" id="theme-toggle"><i class="fi fi-rr-sun topbar-menu-icon"></i></button>
     </li>
     <li class="dropdown user-nav">
       <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

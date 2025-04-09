@@ -104,6 +104,11 @@ ul {
   scrollbar-color: var(--primary-color-dark) var(--primary-color-lighten);
   scrollbar-width: thin;
 }
+[data-bs-theme="dark"] {
+  * {
+    scrollbar-color: var(--primary-color-dark) var(--primary-color-darker);
+  }
+}
 
 ::-webkit-scrollbar {
   width: rem(5);

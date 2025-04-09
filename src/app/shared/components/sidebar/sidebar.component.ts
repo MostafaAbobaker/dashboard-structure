@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SidebarService } from '../../services/sidebar.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,13 +14,13 @@ export class SidebarComponent {
   isCollapsed: boolean = false; // Tracks the sidebar state
   toggleSubMenu(subMenu: string): void {
     this.activeSubMenu = this.activeSubMenu === subMenu ? null : subMenu; // Toggles submenu
-    this.isCollapsed = false; // Toggles sidebar state
+    // this.isCollapsed = false; // Toggles sidebar state
+    this.sidebarService.openSidebar()
   }
   closeSidebar(): void {
     this.isCollapsed = !this.isCollapsed; // Closes the sidebar
     this.activeSubMenu = null; // Resets active submenu
   }
-
 
 
   constructor(private sidebarService: SidebarService) {}

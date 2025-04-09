@@ -1,11 +1,19 @@
 <aside class="sidebar" id="sidebar" [ngClass]="{'collapsed': isCollapsed}" >
   <ul>
     <li>
-      <a href="">
+      <a class="logo">
 
-        <span class="logo">Coding2go</span>
+        <span class="logo-icon">
+          <img src="../../../../assets/img/logo-1-dark.svg" alt="" class="logo-dark">
+          <img src="../../../../assets/img/logo-1.svg" alt="" class="logo-light">
+
+        </span>
+        <span class="logo-text">
+          <img src="../../../../assets/img/logo-2-dark.svg" alt="" class="text-dark">
+          <img src="../../../../assets/img/logo-2.svg" alt="" class="text-light">
+        </span>
       </a>
-      <button class="toggle-btn" [ngClass]="{'rotate': isCollapsed}" (click)="closeSidebar()"><i class="fi fi-rr-angle-double-small-left"></i></button>
+      <!-- <button class="toggle-btn" [ngClass]="{'rotate': isCollapsed}" (click)="closeSidebar()"><i class="fi fi-rr-angle-double-small-left"></i></button> -->
     </li>
     <li >
       <a class="active" href=" ">
@@ -26,7 +34,7 @@
         <span class="icon-toggle" [class.rotate]="activeSubMenu === 'Create'"><i class="fi fi-rr-angle-small-down"></i></span>
 
       </button>
-      <div class="sub-menu"  [class.show]="activeSubMenu === 'Create'">
+      <div class="sub-menu"  [class.show]="activeSubMenu === 'Create' && isCollapsed === false">
         <ul>
           <li><a href="">Folder</a></li>
           <li><a href="">Document</a></li>
@@ -41,7 +49,7 @@
         <span class="icon-toggle" [class.rotate]="activeSubMenu === 'todoLists'"><i class="fi fi-rr-angle-small-down"></i></span>
 
       </button>
-      <div class="sub-menu" [class.show]="activeSubMenu === 'todoLists'">
+      <div class="sub-menu" [class.show]="activeSubMenu === 'todoLists' && isCollapsed === false">
         <ul>
           <li><a href="">Work</a></li>
           <li><a href="">Private</a></li>
