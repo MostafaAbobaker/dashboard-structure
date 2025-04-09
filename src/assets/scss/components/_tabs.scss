@@ -18,16 +18,16 @@
   }
 
   .nav-link.active {
-    color: var(--gray-color-70);
+    color: var(--gray-70-color);
     background-color: var(--white-color);
-    border-color: var(--gray-color-20) var(--gray-color-20) var(--white-color);
+    border-color: var(--gray-20-color) var(--gray-20-color) var(--white-color);
     margin-top: rem(-5);
   }
 }
 
 .tab-content {
   padding: rem(15);
-  border: 1px solid var(--gray-color-20);
+  border: 1px solid var(--gray-20-color);
   border-radius: $radius;
   border-start-start-radius: 0;
   background-color: var(--white-color);
@@ -50,7 +50,7 @@
     }
 
     .nav-link.active {
-      border-color: var(--gray-color-20);
+      border-color: var(--gray-20-color);
       margin-top: 0;
     }
   }

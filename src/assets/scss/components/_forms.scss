@@ -73,18 +73,18 @@
 
   .list-group-item {
     padding: $padding;
-    color: var(--gray-color-50);
+    color: var(--gray-50-color);
   }
 
   .btn {
-    color: var(--gray-color-50);
+    color: var(--gray-50-color);
     padding: 0;
     line-height: 100%;
     margin-top: rem(-4);
 
     &:hover,
     &:focus {
-      color: var(--gray-color-70);
+      color: var(--gray-70-color);
     }
   }
 
@@ -95,8 +95,8 @@
 }
 
 .form-control-info {
-  color: var(--gray-color-50);
-  border: 1px solid var(--gray-color-20);
+  color: var(--gray-50-color);
+  border: 1px solid var(--gray-20-color);
 }
 
 // Form Floating
@@ -116,11 +116,11 @@
 }
 
 .form-label {
-  color: var(--gray-color-50);
+  color: var(--gray-50-color);
 }
 
 .form-text {
-  color: var(--gray-color-50);
+  color: var(--gray-50-color);
 }
 
 .form-number {
@@ -135,7 +135,7 @@
     letter-spacing: rem(20);
 
     &:focus::placeholder {
-      color: var(--gray-color-30);
+      color: var(--gray-30-color);
     }
   }
 }

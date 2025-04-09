@@ -36,16 +36,14 @@
 /* !************************* End Size for padding and margin and font size ******************/
 
 /* !************************* Start Generate Class for Gap size from 0 to 5 ******************/
-
-@for $i from 0 through 5 {
-    .g-#{$i} {
-      @if $i == 5 {
-        gap: 3rem;
-      } @else {
-        gap: #{$i * 0.5}rem;
-      }
-    }
+@each $key, $value in $values {
+  .gap-#{$key} {
+    gap: $value;
   }
+}
+
+
+
   /* !************************* End Generate Class for Gap size from 0 to 5 ******************/
 
   /* !************************* Start Generate Class for line-clamp size from 0 to 10 ******************/
@@ -162,8 +160,8 @@
 
       --#{$name}-color-dark: #{color.adjust($property, $lightness: -10%)};
       --#{$name}-color-darker: #{color.adjust($property, $lightness: -20%)};
-      --#{$name}-color-light: #{color.adjust($property, $lightness: 10%)};
-      --#{$name}-color-lighten: #{color.adjust($property, $lightness: 20%)};
+      --#{$name}-color-light: #{color.adjust($property, $lightness: 5%)};
+      --#{$name}-color-lighten: #{color.adjust($property, $lightness: 45%)};
 
 
     }

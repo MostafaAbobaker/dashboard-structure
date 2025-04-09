@@ -1,1 +1,67 @@
-<p>sidebar works!</p>
+<aside class="sidebar" id="sidebar" [ngClass]="{'collapsed': isCollapsed}" >
+  <ul>
+    <li>
+      <a href="">
+
+        <span class="logo">Coding2go</span>
+      </a>
+      <button class="toggle-btn" [ngClass]="{'rotate': isCollapsed}" (click)="closeSidebar()"><i class="fi fi-rr-angle-double-small-left"></i></button>
+    </li>
+    <li >
+      <a class="active" href=" ">
+        <span class="icon"><i class="fi fi-rs-house-chimney"></i></span>
+        <span class="text">Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <span class="icon"><i class="fi fi-rr-layout-fluid"></i></span>
+        <span class="text">Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <button class="dropdown-btn" (click)="toggleSubMenu('Create')">
+        <span class="icon"><i class="fi fi-rr-add-folder"></i></span>
+        <span class="text">Create</span>
+        <span class="icon-toggle" [class.rotate]="activeSubMenu === 'Create'"><i class="fi fi-rr-angle-small-down"></i></span>
+
+      </button>
+      <div class="sub-menu"  [class.show]="activeSubMenu === 'Create'">
+        <ul>
+          <li><a href="">Folder</a></li>
+          <li><a href="">Document</a></li>
+          <li><a href="">Project</a></li>
+        </ul>
+        </div>
+    </li>
+    <li>
+      <button class="dropdown-btn" (click)="toggleSubMenu('todoLists')">
+        <span class="icon"><i class="fi fi-rr-list-check"></i></span>
+        <span class="text">Todo-Lists</span>
+        <span class="icon-toggle" [class.rotate]="activeSubMenu === 'todoLists'"><i class="fi fi-rr-angle-small-down"></i></span>
+
+      </button>
+      <div class="sub-menu" [class.show]="activeSubMenu === 'todoLists'">
+        <ul>
+          <li><a href="">Work</a></li>
+          <li><a href="">Private</a></li>
+          <li><a href="">Coding</a></li>
+          <li><a href="">Gardening</a></li>
+          <li><a href="">School</a></li>
+        </ul>
+        </div>
+    </li>
+    <li>
+      <a href="">
+        <span class="icon"><i class="fi fi-rs-calendar"></i></span>
+        <span class="text">Calendar</span>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <span class="icon"><i class="fi fi-bs-user"></i></span>
+        <span class="text">Profile</span>
+      </a>
+    </li>
+  </ul>
+</aside>

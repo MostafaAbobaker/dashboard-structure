@@ -1,13 +1,14 @@
-<nav class="top-bar">
+<nav class="topbar">
 
   <a href="#" class="logo-sm">
     <img src="./assets/img/logo-1.svg" alt="logo" class="logo-light">
     <img src="./assets/img/logo-1-dark.svg" alt="logo" class="logo-dark">
   </a>
 
-  <button class="sidebar-toggle" type="button" onclick="slideBtn()">
+  <!-- <button class="sidebar-toggle" type="button" onclick="slideBtn()">
     <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-  </button>
+  </button> -->
+  <button class="toggle-btn" [ngClass]="{'rotate': isCollapsed}" (click)="closeSidebar()"><i class="fi fi-rr-angle-double-small-left"></i></button>
 
 
 

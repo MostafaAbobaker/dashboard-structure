@@ -1,8 +1,25 @@
 @use "../../../../assets/scss/abstracts" as *;
 
+.toggle-btn {
+  padding: 1rem;
+  border: none;
+  border-radius: $radius;
+  background: none;
+  transform: scale(-1);
+  color: var(--gray-70-color);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: rgb(var(--black-rgb-color)/ 5%);
+  }
+  &.rotate {
+    transform: scale(1);
+  }
+  @include mqMax("md") {
+    display: none;
+  }
+}
 
-
-.top-bar {
+/* .top-bar {
   background-color: var(--primary-color);
   color: var(--white-color);
   padding: 0.5rem 1rem;
@@ -24,4 +41,4 @@
       }
     }
   }
-}
+} */
